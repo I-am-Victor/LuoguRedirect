@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Luogu Redirect
-// @namespace    http://tampermonkey.net/
-// @version      1.0
+// @namespace    https://github.com/uint128t/LuoguRedirect
+// @version      0.7
 // @description  Redirect Luogu China to international site or luogu.me
 // @author       uint128t
 // @match        *://*.luogu.com.cn/*
