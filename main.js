@@ -191,9 +191,14 @@
             }
 
             const tpl = TEMPLATES[matched];
-            // compute subpath: keep leading slash if any
-            const rest = pathname.slice(matched.length + 1); // remove leading '/' and type
-            const subpath = rest ? '/' + rest : '';
+            // compute subpath: remove the leading '/<type>' prefix and keep the remaining path (including leading slash)
+            // examples: '/article/123' -> '/123'; '/article' or '/article/' -> ''
+            const prefix = '/' + matched;
+            let rest = '';
+            if (pathname.startsWith(prefix)) {
+                rest = pathname.slice(prefix.length); // may be '' or '/...' or '/'
+            }
+            const subpath = (rest && rest !== '/') ? rest : '';
 
             const currentUrl = window.location.href;
 
