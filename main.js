@@ -7,6 +7,8 @@
 // @match        *://*.luogu.com.cn/*
 // @run-at       document-start
 // @grant        none
+// @downloadURL https://raw.githubusercontent.com/I-am-Victor/LuoguRedirect/refs/heads/main/main.js
+// @updateURL https://raw.githubusercontent.com/I-am-Victor/LuoguRedirect/refs/heads/main/main.js
 // ==/UserScript==
 
 (function () {
